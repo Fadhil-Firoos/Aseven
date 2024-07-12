@@ -3,6 +3,7 @@
 use App\Http\Controllers\Auth\EmailVerificationController;
 use App\Http\Controllers\Auth\LogoutController;
 use App\Livewire\Auth\Login;
+use App\Livewire\Product;
 use App\Livewire\Auth\Passwords\Confirm;
 use App\Livewire\Auth\Passwords\Email;
 use App\Livewire\Auth\Passwords\Reset;
@@ -30,6 +31,9 @@ Route::middleware('guest')->group(function () {
     Route::get('register', Register::class)
         ->name('register');
 });
+
+Route::get('product', Product::class)
+    ->name('product');
 
 Route::get('password/reset', Email::class)
     ->name('password.request');
