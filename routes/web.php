@@ -22,11 +22,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/', 'welcome')->name('home');
 
 Route::middleware('guest')->group(function () {
-    Route::get('login', Login::class)
-        ->name('login');
+    Route::get('/', Login::class)
+    ->name('login');
 
     Route::get('register', Register::class)
         ->name('register');
