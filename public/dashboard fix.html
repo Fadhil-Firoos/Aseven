@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+  <div class="flex">
+    <!-- Sidebar -->
+    <div class="w-64 bg-gray-800 h-screen fixed top-0 left-0">
+      <div class="text-white text-center py-4">
+        <h2 class="text-xl font-bold">Dashboard</h2>
+      </div>
+      <nav class="text-gray-300 text-base font-semibold px-4 py-2">
+        <a href="#" class="block py-2.5 px-4 rounded hover:bg-gray-700"><i class="fa-solid fa-chart-line"></i> Analytics</a>
+        <a href="#" class="block py-2.5 px-4 rounded hover:bg-gray-700"><i class="fa-solid fa-box-open"></i> Product</a>
+        <a href="#" class="block py-2.5 px-4 rounded hover:bg-gray-700"><i class="fa-solid fa-clipboard-list"></i> Transaction</a>
+        <a href="#" class="block py-2.5 px-4 rounded hover:bg-gray-700"><i class="fa-solid fa-bullhorn"></i> Campaign</a>
+        <a href="#" class="block py-2.5 px-4 rounded hover:bg-gray-700"><i class="fa-solid fa-truck"></i> Expedition</a>
+        <a href="#" class="block py-2.5 px-4 rounded hover:bg-gray-700"><i class="fa-solid fa-file-lines"></i> Report</a>
+        <a href="#" class="block py-2.5 px-4 rounded hover:bg-gray-700"><i class="fa-solid fa-user-group"></i> User</a>
+      </nav>
+      <div class="absolute bottom-0 text-gray-300 text-sm font-semibold px-4 py-2">
+        <a href="#" class="block py-2.5 px-2 rounded hover:bg-gray-700"><i class="fa-solid fa-sliders"></i> Preferences</a>
+        <a href="#" class="block py-2.5 px-2 rounded hover:bg-gray-700"><i class="fa-solid fa-circle-user"></i> Adam Apple - Administrator</a>
+        <a href="#" class="block py-2.5 px-2 rounded hover:bg-gray-700"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
+      </div>
+    </div>
+
+    <!-- Main content -->
+    <div class="flex-grow p-6 ml-64">
+      <div class="flex justify-between items-center mb-6">
+        <h1 class="text-3xl font-bold">Menu Title</h1>
+        <div>
+          <button class="bg-gray-300 text-gray-800 py-2 px-4 rounded mr-2 hover:bg-black hover:text-white hover:border hover:border-black"><i class="fa-solid fa-plus"></i> Secondary Action</button>
+          <button class="bg-black text-white py-2 px-4 rounded hover:bg-gray-300 hover:text-gray-800 hover:border hover:border-gray-300"><i class="fa-solid fa-plus"></i> Primary Action</button>
+        </div>
+      </div>
+
+      <!-- Table -->
+      <div class="bg-white shadow-md rounded">
+        <table class="min-w-full bg-white">
+          <thead class="bg-gray-800 text-white">
+            <tr>
+              <th class="w-16 py-3 px-4 uppercase font-semibold text-sm text-center"><input type="checkbox" id="select-all"></th>
+              <th class="w-1/3 py-3 px-4 uppercase font-semibold text-sm text-left"><button class="sort-button" data-column="name"><i class="fas fa-caret-down mr-2"></i> Name</button></th>
+              <th class="w-1/4 py-3 px-4 uppercase font-semibold text-sm text-left"><button class="sort-button" data-column="type"><i class="fas fa-caret-down mr-2"></i> Type</button></th>
+              <th class="w-1/4 py-3 px-4 uppercase font-semibold text-sm text-left"><button class="sort-button" data-column="price"><i class="fas fa-caret-down mr-2"></i> Price</button></th>
+              <th class="w-1/4 py-3 px-4 uppercase font-semibold text-sm text-center">Action</th>
+            </tr>
+          </thead>
+          <tbody class="text-gray-700">
+            <tr>
+              <td class="w-16 py-2 px-4 text-center"><input type="checkbox" class="row-checkbox"></td>
+              <td class="w-1/3 py-2 px-4">Data1</td>
+              <td class="w-1/4 py-2 px-4"><span class="bg-gray-200 text-gray-700 py-1 px-3 rounded-full text-xs">Labels1</span></td>
+              <td class="w-1/4 py-2 px-4">Data1</td>
+              <td class="w-1/4 py-2 px-4 text-center">
+                <button class="text-gray-500 hover:text-gray-700 mx-1 border p-2 rounded-lg"><i class="fas fa-eye"></i></button>
+                <button class="text-gray-500 hover:text-gray-700 mx-1 border p-2 rounded-lg"><i class="fas fa-pencil-alt"></i></button>
+                <button class="text-gray-500 hover:text-gray-700 mx-1"><i class="fas fa-trash-alt"></i></button>
+              </td>
+            </tr>
+            <tr>
+                <td class="w-16 py-2 px-4 text-center"><input type="checkbox" class="row-checkbox"></td>
+                <td class="w-1/3 py-2 px-4">Data1</td>
+                <td class="w-1/4 py-2 px-4"><span class="bg-gray-200 text-gray-700 py-1 px-3 rounded-full text-xs">Labels1</span></td>
+                <td class="w-1/4 py-2 px-4">Data1</td>
+                <td class="w-1/4 py-2 px-4 text-center">
+                  <button class="text-gray-500 hover:text-gray-700 mx-1 border p-2 rounded-lg"><i class="fas fa-eye"></i></button>
+                  <button class="text-gray-500 hover:text-gray-700 mx-1 border p-2 rounded-lg"><i class="fas fa-pencil-alt"></i></button>
+                  <button class="text-gray-500 hover:text-gray-700 mx-1"><i class="fas fa-trash-alt"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td class="w-16 py-2 px-4 text-center"><input type="checkbox" class="row-checkbox"></td>
+                <td class="w-1/3 py-2 px-4">Data1</td>
+                <td class="w-1/4 py-2 px-4"><span class="bg-gray-200 text-gray-700 py-1 px-3 rounded-full text-xs">Labels1</span></td>
+                <td class="w-1/4 py-2 px-4">Data1</td>
+                <td class="w-1/4 py-2 px-4 text-center">
+                  <button class="text-gray-500 hover:text-gray-700 mx-1 border p-2 rounded-lg"><i class="fas fa-eye"></i></button>
+                  <button class="text-gray-500 hover:text-gray-700 mx-1 border p-2 rounded-lg"><i class="fas fa-pencil-alt"></i></button>
+                  <button class="text-gray-500 hover:text-gray-700 mx-1"><i class="fas fa-trash-alt"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td class="w-16 py-2 px-4 text-center"><input type="checkbox" class="row-checkbox"></td>
+                <td class="w-1/3 py-2 px-4">Data1</td>
+                <td class="w-1/4 py-2 px-4"><span class="bg-gray-200 text-gray-700 py-1 px-3 rounded-full text-xs">Labels1</span></td>
+                <td class="w-1/4 py-2 px-4">Data1</td>
+                <td class="w-1/4 py-2 px-4 text-center">
+                  <button class="text-gray-500 hover:text-gray-700 mx-1 border p-2 rounded-lg"><i class="fas fa-eye"></i></button>
+                  <button class="text-gray-500 hover:text-gray-700 mx-1 border p-2 rounded-lg"><i class="fas fa-pencil-alt"></i></button>
+                  <button class="text-gray-500 hover:text-gray-700 mx-1"><i class="fas fa-trash-alt"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td class="w-16 py-2 px-4 text-center"><input type="checkbox" class="row-checkbox"></td>
+                <td class="w-1/3 py-2 px-4">Data1</td>
+                <td class="w-1/4 py-2 px-4"><span class="bg-gray-200 text-gray-700 py-1 px-3 rounded-full text-xs">Labels1</span></td>
+                <td class="w-1/4 py-2 px-4">Data1</td>
+                <td class="w-1/4 py-2 px-4 text-center">
+                  <button class="text-gray-500 hover:text-gray-700 mx-1 border p-2 rounded-lg"><i class="fas fa-eye"></i></button>
+                  <button class="text-gray-500 hover:text-gray-700 mx-1 border p-2 rounded-lg"><i class="fas fa-pencil-alt"></i></button>
+                  <button class="text-gray-500 hover:text-gray-700 mx-1"><i class="fas fa-trash-alt"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td class="w-16 py-2 px-4 text-center"><input type="checkbox" class="row-checkbox"></td>
+                <td class="w-1/3 py-2 px-4">Data1</td>
+                <td class="w-1/4 py-2 px-4"><span class="bg-gray-200 text-gray-700 py-1 px-3 rounded-full text-xs">Labels1</span></td>
+                <td class="w-1/4 py-2 px-4">Data1</td>
+                <td class="w-1/4 py-2 px-4 text-center">
+                  <button class="text-gray-500 hover:text-gray-700 mx-1 border p-2 rounded-lg"><i class="fas fa-eye"></i></button>
+                  <button class="text-gray-500 hover:text-gray-700 mx-1 border p-2 rounded-lg"><i class="fas fa-pencil-alt"></i></button>
+                  <button class="text-gray-500 hover:text-gray-700 mx-1"><i class="fas fa-trash-alt"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td class="w-16 py-2 px-4 text-center"><input type="checkbox" class="row-checkbox"></td>
+                <td class="w-1/3 py-2 px-4">Data1</td>
+                <td class="w-1/4 py-2 px-4"><span class="bg-gray-200 text-gray-700 py-1 px-3 rounded-full text-xs">Labels1</span></td>
+                <td class="w-1/4 py-2 px-4">Data1</td>
+                <td class="w-1/4 py-2 px-4 text-center">
+                  <button class="text-gray-500 hover:text-gray-700 mx-1 border p-2 rounded-lg"><i class="fas fa-eye"></i></button>
+                  <button class="text-gray-500 hover:text-gray-700 mx-1 border p-2 rounded-lg"><i class="fas fa-pencil-alt"></i></button>
+                  <button class="text-gray-500 hover:text-gray-700 mx-1"><i class="fas fa-trash-alt"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td class="w-16 py-2 px-4 text-center"><input type="checkbox" class="row-checkbox"></td>
+                <td class="w-1/3 py-2 px-4">Data1</td>
+                <td class="w-1/4 py-2 px-4"><span class="bg-gray-200 text-gray-700 py-1 px-3 rounded-full text-xs">Labels1</span></td>
+                <td class="w-1/4 py-2 px-4">Data1</td>
+                <td class="w-1/4 py-2 px-4 text-center">
+                  <button class="text-gray-500 hover:text-gray-700 mx-1 border p-2 rounded-lg"><i class="fas fa-eye"></i></button>
+                  <button class="text-gray-500 hover:text-gray-700 mx-1 border p-2 rounded-lg"><i class="fas fa-pencil-alt"></i></button>
+                  <button class="text-gray-500 hover:text-gray-700 mx-1"><i class="fas fa-trash-alt"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td class="w-16 py-2 px-4 text-center"><input type="checkbox" class="row-checkbox"></td>
+                <td class="w-1/3 py-2 px-4">Data1</td>
+                <td class="w-1/4 py-2 px-4"><span class="bg-gray-200 text-gray-700 py-1 px-3 rounded-full text-xs">Labels1</span></td>
+                <td class="w-1/4 py-2 px-4">Data1</td>
+                <td class="w-1/4 py-2 px-4 text-center">
+                  <button class="text-gray-500 hover:text-gray-700 mx-1 border p-2 rounded-lg"><i class="fas fa-eye"></i></button>
+                  <button class="text-gray-500 hover:text-gray-700 mx-1 border p-2 rounded-lg"><i class="fas fa-pencil-alt"></i></button>
+                  <button class="text-gray-500 hover:text-gray-700 mx-1"><i class="fas fa-trash-alt"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td class="w-16 py-2 px-4 text-center"><input type="checkbox" class="row-checkbox"></td>
+                <td class="w-1/3 py-2 px-4">Data1</td>
+                <td class="w-1/4 py-2 px-4"><span class="bg-gray-200 text-gray-700 py-1 px-3 rounded-full text-xs">Labels1</span></td>
+                <td class="w-1/4 py-2 px-4">Data1</td>
+                <td class="w-1/4 py-2 px-4 text-center">
+                  <button class="text-gray-500 hover:text-gray-700 mx-1 border p-2 rounded-lg"><i class="fas fa-eye"></i></button>
+                  <button class="text-gray-500 hover:text-gray-700 mx-1 border p-2 rounded-lg"><i class="fas fa-pencil-alt"></i></button>
+                  <button class="text-gray-500 hover:text-gray-700 mx-1"><i class="fas fa-trash-alt"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td class="w-16 py-2 px-4 text-center"><input type="checkbox" class="row-checkbox"></td>
+                <td class="w-1/3 py-2 px-4">Data1</td>
+                <td class="w-1/4 py-2 px-4"><span class="bg-gray-200 text-gray-700 py-1 px-3 rounded-full text-xs">Labels1</span></td>
+                <td class="w-1/4 py-2 px-4">Data1</td>
+                <td class="w-1/4 py-2 px-4 text-center">
+                  <button class="text-gray-500 hover:text-gray-700 mx-1 border p-2 rounded-lg"><i class="fas fa-eye"></i></button>
+                  <button class="text-gray-500 hover:text-gray-700 mx-1 border p-2 rounded-lg"><i class="fas fa-pencil-alt"></i></button>
+                  <button class="text-gray-500 hover:text-gray-700 mx-1"><i class="fas fa-trash-alt"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td class="w-16 py-2 px-4 text-center"><input type="checkbox" class="row-checkbox"></td>
+                <td class="w-1/3 py-2 px-4">Data1</td>
+                <td class="w-1/4 py-2 px-4"><span class="bg-gray-200 text-gray-700 py-1 px-3 rounded-full text-xs">Labels1</span></td>
+                <td class="w-1/4 py-2 px-4">Data1</td>
+                <td class="w-1/4 py-2 px-4 text-center">
+                  <button class="text-gray-500 hover:text-gray-700 mx-1 border p-2 rounded-lg"><i class="fas fa-eye"></i></button>
+                  <button class="text-gray-500 hover:text-gray-700 mx-1 border p-2 rounded-lg"><i class="fas fa-pencil-alt"></i></button>
+                  <button class="text-gray-500 hover:text-gray-700 mx-1"><i class="fas fa-trash-alt"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td class="w-16 py-2 px-4 text-center"><input type="checkbox" class="row-checkbox"></td>
+                <td class="w-1/3 py-2 px-4">Data1</td>
+                <td class="w-1/4 py-2 px-4"><span class="bg-gray-200 text-gray-700 py-1 px-3 rounded-full text-xs">Labels1</span></td>
+                <td class="w-1/4 py-2 px-4">Data1</td>
+                <td class="w-1/4 py-2 px-4 text-center">
+                  <button class="text-gray-500 hover:text-gray-700 mx-1 border p-2 rounded-lg"><i class="fas fa-eye"></i></button>
+                  <button class="text-gray-500 hover:text-gray-700 mx-1 border p-2 rounded-lg"><i class="fas fa-pencil-alt"></i></button>
+                  <button class="text-gray-500 hover:text-gray-700 mx-1"><i class="fas fa-trash-alt"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td class="w-16 py-2 px-4 text-center"><input type="checkbox" class="row-checkbox"></td>
+                <td class="w-1/3 py-2 px-4">Data1</td>
+                <td class="w-1/4 py-2 px-4"><span class="bg-gray-200 text-gray-700 py-1 px-3 rounded-full text-xs">Labels1</span></td>
+                <td class="w-1/4 py-2 px-4">Data1</td>
+                <td class="w-1/4 py-2 px-4 text-center">
+                  <button class="text-gray-500 hover:text-gray-700 mx-1 border p-2 rounded-lg"><i class="fas fa-eye"></i></button>
+                  <button class="text-gray-500 hover:text-gray-700 mx-1 border p-2 rounded-lg"><i class="fas fa-pencil-alt"></i></button>
+                  <button class="text-gray-500 hover:text-gray-700 mx-1"><i class="fas fa-trash-alt"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td class="w-16 py-2 px-4 text-center"><input type="checkbox" class="row-checkbox"></td>
+                <td class="w-1/3 py-2 px-4">Data1</td>
+                <td class="w-1/4 py-2 px-4"><span class="bg-gray-200 text-gray-700 py-1 px-3 rounded-full text-xs">Labels1</span></td>
+                <td class="w-1/4 py-2 px-4">Data1</td>
+                <td class="w-1/4 py-2 px-4 text-center">
+                  <button class="text-gray-500 hover:text-gray-700 mx-1 border p-2 rounded-lg"><i class="fas fa-eye"></i></button>
+                  <button class="text-gray-500 hover:text-gray-700 mx-1 border p-2 rounded-lg"><i class="fas fa-pencil-alt"></i></button>
+                  <button class="text-gray-500 hover:text-gray-700 mx-1"><i class="fas fa-trash-alt"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td class="w-16 py-2 px-4 text-center"><input type="checkbox" class="row-checkbox"></td>
+                <td class="w-1/3 py-2 px-4">Data1</td>
+                <td class="w-1/4 py-2 px-4"><span class="bg-gray-200 text-gray-700 py-1 px-3 rounded-full text-xs">Labels1</span></td>
+                <td class="w-1/4 py-2 px-4">Data1</td>
+                <td class="w-1/4 py-2 px-4 text-center">
+                  <button class="text-gray-500 hover:text-gray-700 mx-1 border p-2 rounded-lg"><i class="fas fa-eye"></i></button>
+                  <button class="text-gray-500 hover:text-gray-700 mx-1 border p-2 rounded-lg"><i class="fas fa-pencil-alt"></i></button>
+                  <button class="text-gray-500 hover:text-gray-700 mx-1"><i class="fas fa-trash-alt"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td class="w-16 py-2 px-4 text-center"><input type="checkbox" class="row-checkbox"></td>
+                <td class="w-1/3 py-2 px-4">Data1</td>
+                <td class="w-1/4 py-2 px-4"><span class="bg-gray-200 text-gray-700 py-1 px-3 rounded-full text-xs">Labels1</span></td>
+                <td class="w-1/4 py-2 px-4">Data1</td>
+                <td class="w-1/4 py-2 px-4 text-center">
+                  <button class="text-gray-500 hover:text-gray-700 mx-1 border p-2 rounded-lg"><i class="fas fa-eye"></i></button>
+                  <button class="text-gray-500 hover:text-gray-700 mx-1 border p-2 rounded-lg"><i class="fas fa-pencil-alt"></i></button>
+                  <button class="text-gray-500 hover:text-gray-700 mx-1"><i class="fas fa-trash-alt"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td class="w-16 py-2 px-4 text-center"><input type="checkbox" class="row-checkbox"></td>
+                <td class="w-1/3 py-2 px-4">Data1</td>
+                <td class="w-1/4 py-2 px-4"><span class="bg-gray-200 text-gray-700 py-1 px-3 rounded-full text-xs">Labels1</span></td>
+                <td class="w-1/4 py-2 px-4">Data1</td>
+                <td class="w-1/4 py-2 px-4 text-center">
+                  <button class="text-gray-500 hover:text-gray-700 mx-1 border p-2 rounded-lg"><i class="fas fa-eye"></i></button>
+                  <button class="text-gray-500 hover:text-gray-700 mx-1 border p-2 rounded-lg"><i class="fas fa-pencil-alt"></i></button>
+                  <button class="text-gray-500 hover:text-gray-700 mx-1"><i class="fas fa-trash-alt"></i></button>
+                </td>
+              </tr>
+            <!-- Additional rows here -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // JavaScript to handle checkbox
+    document.getElementById('select-all').addEventListener('change', function() {
+      var checkboxes = document.querySelectorAll('.row-checkbox');
+      for (var checkbox of checkboxes) {
+        checkbox.checked = this.checked;
+      }
+    });
+  </script>
+</body>
+</html>
