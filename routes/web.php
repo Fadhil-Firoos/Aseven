@@ -6,6 +6,8 @@ use App\Http\Middleware\superadmin;
 use App\Livewire\Auth\Login;
 use App\Livewire\Product;
 use App\Livewire\KelolaUser;
+use App\Livewire\CreateUser;
+use App\Livewire\EditUser;
 use App\Livewire\Auth\Passwords\Confirm;
 use App\Livewire\Auth\Passwords\Email;
 use App\Livewire\Auth\Passwords\Reset;
@@ -54,7 +56,7 @@ Route::middleware([superadmin::class])->name('superadmin.')->prefix('superadmin'
     ->name('product');
     Route::get('kelola-user', KelolaUser::class)
     ->name('kelola-user');
-    Route::get('create-user', KelolaUser::class)
+    Route::get('create-user', CreateUser::class)
     ->name('create-user');
 
 });
