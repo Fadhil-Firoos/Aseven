@@ -12,6 +12,8 @@ use App\Livewire\Auth\Passwords\Email;
 use App\Livewire\Auth\Passwords\Reset;
 use App\Livewire\Auth\Register;
 use App\Livewire\Auth\Verify;
+use App\Livewire\User\EditUser;
+use App\Livewire\User\ShowUser;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -57,8 +59,10 @@ Route::middleware([superadmin::class])->name('superadmin.')->prefix('superadmin'
     ->name('kelola-user');
     Route::get('create-user', CreateUser::class)
     ->name('create-user');
-    Route::get('user/show/{id}', CreateUser::class)
-    ->name('create-user');
+    Route::get('user/show/{user}', ShowUser::class)
+    ->name('user.show');
+    Route::get('user/edit/{user}', EditUser::class)
+    ->name('user.edit');
 
 });
 
