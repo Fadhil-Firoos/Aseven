@@ -39,7 +39,18 @@
                     <a href="#" class="block py-2.5 px-4 rounded hover:bg-gray-700"><i class="fa-solid fa-bullhorn"></i> Campaign</a>
                     <a href="#" class="block py-2.5 px-4 rounded hover:bg-gray-700"><i class="fa-solid fa-truck"></i> Expedition</a>
                     <a href="#" class="block py-2.5 px-4 rounded hover:bg-gray-700"><i class="fa-solid fa-file-lines"></i> Report</a>
-                    <a href="{{ route('superadmin.kelola-user') }}" class="block py-2.5 px-4 rounded hover:bg-gray-700"><i class="fa-solid fa-user-group"></i> User</a>
+
+                    <!-- Dropdown User -->
+                    <div x-data="{ open: false }" class="relative">
+                        <a href="#" @click.prevent="open = !open" class="block py-2.5 px-4 rounded hover:bg-gray-700 cursor-pointer">
+                            <i class="fa-solid fa-user-group"></i> User
+                            <i :class="open ? 'fa-chevron-up' : 'fa-chevron-down'" class="fa ml-2"></i>
+                        </a>
+                        <div x-show="open" @click.away="open = false" class="bg-gray-700 rounded-lg mt-2 ml-4">
+                            <a href="{{ route('superadmin.kelola-user') }}" class="block py-2.5 px-4 rounded hover:bg-gray-600">Kelola User</a>
+                            <a href="{{ route('superadmin.create-user') }}" class="block py-2.5 px-4 rounded hover:bg-gray-600">Tambah User</a>
+                        </div>
+                    </div>
                 </nav>
                 <div class="absolute bottom-0 text-gray-300 text-sm font-semibold px-4 py-2">
                     <a href="#" class="block py-2.5 px-2 rounded hover:bg-gray-700"><i class="fa-solid fa-sliders"></i> Preferences</a>
