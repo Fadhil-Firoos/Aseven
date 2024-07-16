@@ -4,6 +4,7 @@ namespace App\Livewire;
 
 use Livewire\Component;
 use App\Models\User;
+use Illuminate\Support\Facades\Route;
 
 class KelolaUser extends Component
 {
@@ -33,6 +34,10 @@ class KelolaUser extends Component
     }
     public function render()
     {
-        return view('livewire.kelola-user')->extends('layouts.app');
+        if (Route::is('superadmin.create-user')){
+            return view('livewire.create-user')->extends('layouts.app');
+        } else if(Route::is('superadmin.kelola-user')){
+            return view('livewire.kelola-user')->extends('layouts.app');
+        }
     }
 }

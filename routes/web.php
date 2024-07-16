@@ -54,6 +54,8 @@ Route::middleware([superadmin::class])->name('superadmin.')->prefix('superadmin'
     ->name('product');
     Route::get('kelola-user', KelolaUser::class)
     ->name('kelola-user');
+    Route::get('create-user', KelolaUser::class)
+    ->name('create-user');
 
 });
 
