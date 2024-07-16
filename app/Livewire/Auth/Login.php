@@ -31,7 +31,8 @@ class Login extends Component
             return;
         }
 
-        return redirect()->intended(route('product'));
+        return redirect()->intended(route('superadmin.product'));
+        
     }
 
     public function render()
