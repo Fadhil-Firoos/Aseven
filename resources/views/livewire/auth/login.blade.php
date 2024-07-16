@@ -41,7 +41,7 @@
                 <a href="{{ route('password.request') }}" class="font-bold text-md">Forgot password?</a>
             </div>
 
-            <button class= "w-full bg-black text-white p-2 rounded-lg mb-6 hover:bg-white hover:text-black hover:border hover:border-gray-300">
+            <button type="submit" class= "w-full bg-black text-white p-2 rounded-lg mb-6 hover:bg-white hover:text-black hover:border hover:border-gray-300">
                 Login
             </button>
         </form>

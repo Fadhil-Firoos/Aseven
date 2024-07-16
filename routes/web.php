@@ -5,6 +5,7 @@ use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Middleware\superadmin;
 use App\Livewire\Auth\Login;
 use App\Livewire\Product;
+use App\Livewire\KelolaUser;
 use App\Livewire\Auth\Passwords\Confirm;
 use App\Livewire\Auth\Passwords\Email;
 use App\Livewire\Auth\Passwords\Reset;
@@ -51,7 +52,10 @@ Route::get('password/reset', Email::class)
 Route::middleware([superadmin::class])->name('superadmin.')->prefix('superadmin')->group(function () {
     Route::get('product', Product::class)
     ->name('product');
+    Route::get('kelola-user', KelolaUser::class)
+    ->name('kelola-user');
 
-    Route::get('logout', LogoutController::class)
-        ->name('logout');
 });
+
+Route::get('logout', LogoutController::class)
+->name('logout');
