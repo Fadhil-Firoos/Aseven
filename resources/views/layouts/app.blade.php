@@ -34,12 +34,12 @@
                 </div>
                 <nav class="text-gray-300 text-base font-semibold px-4 py-2">
                     <a href="#" class="block py-2.5 px-4 rounded hover:bg-gray-700"><i class="fa-solid fa-chart-line"></i> Analytics</a>
-                    <a href="#" class="block py-2.5 px-4 rounded hover:bg-gray-700"><i class="fa-solid fa-box-open"></i> Product</a>
+                    <a href="{{ route('superadmin.product') }}" class="block py-2.5 px-4 rounded hover:bg-gray-700"><i class="fa-solid fa-box-open"></i> Product</a>
                     <a href="#" class="block py-2.5 px-4 rounded hover:bg-gray-700"><i class="fa-solid fa-clipboard-list"></i> Transaction</a>
                     <a href="#" class="block py-2.5 px-4 rounded hover:bg-gray-700"><i class="fa-solid fa-bullhorn"></i> Campaign</a>
                     <a href="#" class="block py-2.5 px-4 rounded hover:bg-gray-700"><i class="fa-solid fa-truck"></i> Expedition</a>
                     <a href="#" class="block py-2.5 px-4 rounded hover:bg-gray-700"><i class="fa-solid fa-file-lines"></i> Report</a>
-                    <a href="#" class="block py-2.5 px-4 rounded hover:bg-gray-700"><i class="fa-solid fa-user-group"></i> User</a>
+                    <a href="{{ route('superadmin.kelola-user') }}" class="block py-2.5 px-4 rounded hover:bg-gray-700"><i class="fa-solid fa-user-group"></i> User</a>
                 </nav>
                 <div class="absolute bottom-0 text-gray-300 text-sm font-semibold px-4 py-2">
                     <a href="#" class="block py-2.5 px-2 rounded hover:bg-gray-700"><i class="fa-solid fa-sliders"></i> Preferences</a>

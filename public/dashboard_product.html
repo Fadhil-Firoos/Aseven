@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admin Dashboard</title>
+  <title>Dashboard Product</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -15,18 +15,18 @@
         <h2 class="text-xl font-bold">Dashboard</h2>
       </div>
       <nav class="text-gray-300 text-base font-semibold px-4 py-2">
-        <a href="#" class="block py-2.5 px-4 rounded hover:bg-gray-700"><i class="fa-solid fa-chart-line"></i> Analytics</a>
-        <a href="#" class="block py-2.5 px-4 rounded hover:bg-gray-700"><i class="fa-solid fa-box-open"></i> Product</a>
-        <a href="#" class="block py-2.5 px-4 rounded hover:bg-gray-700"><i class="fa-solid fa-clipboard-list"></i> Transaction</a>
-        <a href="#" class="block py-2.5 px-4 rounded hover:bg-gray-700"><i class="fa-solid fa-bullhorn"></i> Campaign</a>
-        <a href="#" class="block py-2.5 px-4 rounded hover:bg-gray-700"><i class="fa-solid fa-truck"></i> Expedition</a>
-        <a href="#" class="block py-2.5 px-4 rounded hover:bg-gray-700"><i class="fa-solid fa-file-lines"></i> Report</a>
-        <a href="#" class="block py-2.5 px-4 rounded hover:bg-gray-700"><i class="fa-solid fa-user-group"></i> User</a>
+        <a href="#" class="flex items-center py-2.5 px-4 rounded hover:bg-gray-700"><i class="fa-solid fa-chart-line mr-4"></i><span class="overflow-hidden text-ellipsis whitespace-nowrap">Analytics</span></a>
+        <a href="#" class="flex items-center py-2.5 px-4 rounded hover:bg-gray-700 text-yellow-500"><i class="fa-solid fa-box-open mr-3"></i><span class="overflow-hidden text-ellipsis whitespace-nowrap">Product</span></a>
+        <a href="#" class="flex items-center py-2.5 px-4 rounded hover:bg-gray-700"><i class="fa-solid fa-clipboard-list mr-5"></i><span class="overflow-hidden text-ellipsis whitespace-nowrap">Transaction</span></a>
+        <a href="#" class="flex items-center py-2.5 px-4 rounded hover:bg-gray-700"><i class="fa-solid fa-bullhorn mr-4"></i><span class="overflow-hidden text-ellipsis whitespace-nowrap">Campaign</span></a>
+        <a href="#" class="flex items-center py-2.5 px-4 rounded hover:bg-gray-700"><i class="fa-solid fa-truck mr-3"></i><span class="overflow-hidden text-ellipsis whitespace-nowrap">Expedition</span></a>
+        <a href="#" class="flex items-center py-2.5 px-4 rounded hover:bg-gray-700"><i class="fa-solid fa-file-lines mr-5"></i><span class="overflow-hidden text-ellipsis whitespace-nowrap">Report</span></a>
+        <a href="#" class="flex items-center py-2.5 px-4 rounded hover:bg-gray-700"><i class="fa-solid fa-user-group mr-3"></i><span class="overflow-hidden text-ellipsis whitespace-nowrap">User</span></a>
       </nav>
       <div class="absolute bottom-0 text-gray-300 text-sm font-semibold px-4 py-2">
-        <a href="#" class="block py-2.5 px-2 rounded hover:bg-gray-700"><i class="fa-solid fa-sliders"></i> Preferences</a>
-        <a href="#" class="block py-2.5 px-2 rounded hover:bg-gray-700"><i class="fa-solid fa-circle-user"></i> Adam Apple - Administrator</a>
-        <a href="#" class="block py-2.5 px-2 rounded hover:bg-gray-700"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
+        <a href="#" class="flex items-center py-2.5 px-4 rounded hover:bg-gray-700"><i class="fa-solid fa-sliders mr-3"></i><span class="overflow-hidden text-ellipsis whitespace-nowrap">Preferences</span></a>
+        <a href="#" class="flex items-center py-2.5 px-4 rounded hover:bg-gray-700"><i class="fa-solid fa-circle-user mr-3"></i><span class="overflow-hidden text-ellipsis">Adam Apple - Administrator</span></a>
+        <a href="#" class="flex items-center py-2.5 px-4 rounded hover:bg-gray-700"><i class="fa-solid fa-arrow-right-from-bracket mr-3"></i><span class="overflow-hidden text-ellipsis whitespace-nowrap">Logout</span></a>
       </div>
     </div>
 
@@ -251,7 +251,6 @@
                   <button class="text-gray-500 hover:text-gray-700 mx-1"><i class="fas fa-trash-alt"></i></button>
                 </td>
               </tr>
-            <!-- Additional rows here -->
           </tbody>
         </table>
       </div>
