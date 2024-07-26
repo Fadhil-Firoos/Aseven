@@ -2,7 +2,7 @@
 
 <div class="flex-grow p-6 ml-64">
     <div class="flex justify-between items-center mb-6">
-      <h1 class="text-3xl font-bold">User Menu</h1>
+      <h1 class="text-3xl font-bold">User</h1>
     </div>
 
     <!-- Table -->
@@ -31,7 +31,7 @@
                 <td class="w-1/4 py-2 px-4 text-center">
                     <button wire:navigate href = "{{ route('superadmin.user.show', $value->id) }}" class="text-gray-500 hover:text-gray-700 mx-1 border p-2 rounded-lg"><i class="fas fa-eye"></i></button>
                     <button wire:navigate href = "{{ route('superadmin.user.edit', $value->id) }}" class="text-gray-500 hover:text-gray-700 mx-1 border p-2 rounded-lg"><i class="fas fa-pencil-alt"></i></button>
-                    <button wire:click="delete({{ $value->id }})" class="text-gray-500 hover:text-gray-700 mx-1"><i class="fas fa-trash-alt"></i></button>
+                    <button wire:click="confirmDelete({{ $value->id }})" class="text-gray-500 hover:text-gray-700 mx-1"><i class="fas fa-trash-alt"></i></button>
                 </td>
                 </tr>
           @endforeach

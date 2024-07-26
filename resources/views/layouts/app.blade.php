@@ -47,15 +47,39 @@
                             <i :class="open ? 'fa-chevron-up' : 'fa-chevron-down'" class="fa ml-2"></i>
                         </a>
                         <div x-show="open" @click.away="open = false" class="bg-gray-700 rounded-lg mt-2 ml-4">
-                            <a href="{{ route('superadmin.kelola-user') }}" class="block py-2.5 px-4 rounded hover:bg-gray-600">Kelola User</a>
-                            <a href="{{ route('superadmin.create-user') }}" class="block py-2.5 px-4 rounded hover:bg-gray-600">Tambah User</a>
+                            <a href="{{ route('superadmin.user.kelola-user') }}" class="block py-2.5 px-4 rounded hover:bg-gray-600">Kelola User</a>
+                            <a href="{{ route('superadmin.user.create-user') }}" class="block py-2.5 px-4 rounded hover:bg-gray-600">Tambah User</a>
+                        </div>
+                    </div>
+
+                    <!-- Dropdown Permission -->
+                    <div x-data="{ open: false }" class="relative">
+                        <a href="#" @click.prevent="open = !open" class="block py-2.5 px-4 rounded hover:bg-gray-700 cursor-pointer">
+                            <i class="fa-solid fa-key"></i> Permission
+                            <i :class="open ? 'fa-chevron-up' : 'fa-chevron-down'" class="fa ml-2"></i>
+                        </a>
+                        <div x-show="open" @click.away="open = false" class="bg-gray-700 rounded-lg mt-2 ml-4">
+                            <a href="{{ route('superadmin.permission.kelola-permission') }}" class="block py-2.5 px-4 rounded hover:bg-gray-600">Kelola permission</a>
+                            <a href="{{ route('superadmin.permission.create-permission') }}" class="block py-2.5 px-4 rounded hover:bg-gray-600">Tambah permission</a>
+                        </div>
+                    </div>
+
+                    <!-- Dropdown Role -->
+                    <div x-data="{ open: false }" class="relative">
+                        <a href="#" @click.prevent="open = !open" class="block py-2.5 px-4 rounded hover:bg-gray-700 cursor-pointer">
+                            <i class="fa-solid fa-users-gear"></i> Role
+                            <i :class="open ? 'fa-chevron-up' : 'fa-chevron-down'" class="fa ml-2"></i>
+                        </a>
+                        <div x-show="open" @click.away="open = false" class="bg-gray-700 rounded-lg mt-2 ml-4">
+                            <a href="{{ route('superadmin.role.kelola-role') }}" class="block py-2.5 px-4 rounded hover:bg-gray-600">Kelola Role</a>
+                            <a href="{{ route('superadmin.role.create-role') }}" class="block py-2.5 px-4 rounded hover:bg-gray-600">Tambah Role</a>
                         </div>
                     </div>
                 </nav>
                 <div class="absolute bottom-0 text-gray-300 text-sm font-semibold px-4 py-2">
                     <a href="#" class="block py-2.5 px-2 rounded hover:bg-gray-700"><i class="fa-solid fa-sliders"></i> Preferences</a>
                     <a href="#" class="block py-2.5 px-2 rounded hover:bg-gray-700"><i class="fa-solid fa-circle-user"></i> Adam Apple - Administrator</a>
-                    <a href="#" class="block py-2.5 px-2 rounded hover:bg-gray-700"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
+                    <a href="{{ route('logout') }}" class="block py-2.5 px-2 rounded hover:bg-gray-700"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
                 </div>
             </div>
             @yield('content')
@@ -65,6 +89,8 @@
             @endisset
         </section>
 
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         @livewireScripts
+        <x-livewire-alert::scripts />
     </body>
 </html>
